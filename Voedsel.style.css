@@ -1,12 +1,75 @@
+/* General styling */
 body {
-    font-family: sans-serif;
-    margin: 20px;
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    background-color: #f5f5f5; /* Light gray background for a clean look */
+    color: #333; /* Darker text color for better readability */
 }
 
+/* Sidebar styling */
+.sidebar {
+    width: 250px;
+    background-color: #d52b1e; /* Spanish red */
+    color: white;
+    position: fixed;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-top: 20px;
+    box-sizing: border-box; /* Ensure padding is included in the width */
+    box-shadow: 2px 0 5px rgba(0, 0, 0, 0.2); /* Subtle shadow for better separation */
+}
+
+.sidebar a {
+    color: white;
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+    margin: 15px 0;
+    padding: 10px;
+    width: calc(100% - 20px); /* Adjust width to account for padding */
+    text-align: center;
+    box-sizing: border-box; /* Ensure padding is included in the width */
+    border-radius: 8px; /* Rounded corners */
+    transition: background-color 0.3s, transform 0.3s; /* Smooth transition */
+}
+
+.sidebar a:hover {
+    background-color: #f1c40f; /* Spanish yellow */
+    color: #d52b1e; /* Spanish red for text on hover */
+    transform: scale(1.05); /* Slight zoom effect on hover */
+}
+
+.sidebar .material-symbols-outlined {
+    font-size: 24px;
+    margin-right: 10px;
+}
+
+.sidebar span {
+    font-size: 16px;
+}
+
+/* Main content styling */
+.main-content {
+    margin-left: 250px; /* Offset by the width of the sidebar */
+    padding: 20px;
+    flex-grow: 1;
+    background-color: #ffffff; /* White background for main content */
+    border-radius: 8px; /* Rounded corners for a modern look */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Subtle shadow for separation */
+}
+
+/* Table styling */
 table {
     width: 100%;
     border-collapse: collapse;
     margin-bottom: 20px;
+    background-color: #ffffff; /* White background for table */
+    border-radius: 8px; /* Rounded corners for the table */
+    overflow: hidden; /* Ensure border-radius applies to table rows */
 }
 
 th, td {
@@ -15,45 +78,23 @@ th, td {
     border-bottom: 1px solid #ddd;
 }
 
+th {
+    background-color: #f1c40f; /* Spanish yellow */
+    color: #d52b1e; /* Spanish red */
+}
+
+/* Button styling */
 #addFoodButton {
     margin-top: 10px;
     padding: 8px 16px;
-    background-color: #4CAF50;
+    background-color: #d52b1e; /* Spanish red */
     color: white;
     border: none;
     cursor: pointer;
-}
-
-#top5Restaurants {
-    list-style-type: none;
-    padding: 0;
-}
-
-#top5Restaurants li {
-    background-color: #f8f9fa;
-    padding: 10px;
-    margin-bottom: 5px;
-    border: 1px solid #ddd;
     border-radius: 5px;
+    transition: background-color 0.3s;
 }
-.dashbooard {
-  font-variation-settings:
-  'FILL' 0,
-  'wght' 400,
-  'GRAD' 0,
-  'opsz' 24
-}
-.orders {
-  font-variation-settings:
-  'FILL' 0,
-  'wght' 400,
-  'GRAD' 0,
-  'opsz' 24
-}
-.reservation {
-  font-variation-settings:
-  'FILL' 0,
-  'wght' 400,
-  'GRAD' 0,
-  'opsz' 24
+
+#addFoodButton:hover {
+    background-color: #a71d1a; /* Darker Spanish red */
 }

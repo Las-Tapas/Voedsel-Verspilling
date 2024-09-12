@@ -8,54 +8,56 @@
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0" />   
     <!-- Include CSS file -->
     <link rel="stylesheet" type="text/css" href="Voedsel.style.css">
+    <!-- Load Google Charts script -->
+    <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+    <!-- Include Custom JavaScript file -->
+    <script src="Voedsel.script.js" defer></script>
 </head>
 <body>
-    <!-- Dashboard Navigation -->
-    <nav>
+    <!-- Sidebar Navigation -->
+    <div class="sidebar">
         <a class="dashboard">
             <span class="material-symbols-outlined">grid_view</span>
+            <span>Dashboard</span>
         </a>
         <a class="orders">
             <span class="material-symbols-outlined">orders</span>
+            <span>Orders</span>
         </a>
         <a class="reservation">
             <span class="material-symbols-outlined">book_online</span>
+            <span>Reservation</span>
         </a>
-    </nav>
+    </div>
 
-    <h1>Voedselverspilling Monitor</h1>
+    <!-- Main Content -->
+    <div class="main-content">
+        <h1>Voedselverspilling Monitor</h1>
 
-    <!-- Table for Food Products -->
-    <table id="foodTable">
-        <thead>
-            <tr>
-                <th>Voedselproduct</th>
-                <th>Koopdatum</th>
-                <th>Vervaldatum</th>
-                <th>Aantal</th>
-                <th>Verbruikt</th>
-                <th>Verspild</th>
-                <th>Acties</th>
-            </tr>
-        </thead>
-        <tbody>
-            <!-- Dynamically generated rows will appear here -->
-        </tbody>
-    </table>
-    <button id="addFoodButton">Voeg Voedsel Toe</button>
+        <!-- Table for Food Products -->
+        <table id="foodTable">
+            <thead>
+                <tr>
+                    <th>Voedselproduct</th>
+                    <th>Koopdatum</th>
+                    <th>Vervaldatum</th>
+                    <th>Aantal in kg</th>
+                    <th>Verbruikt in kg</th>
+                    <th>Verspild in kg</th>
+                    <th>Acties</th>
+                </tr>
+            </thead>
+            <tbody>
+                <!-- Dynamically generated rows will appear here -->
+            </tbody>
+        </table>
+        <button id="addFoodButton">Voeg Voedsel Toe</button>
+            <!-- Dynamically generated top 5 list -->
+        </ul>
 
-    <!-- Section for Top 5 Restaurants -->
-    <h2>Top 5 Restaurants met Minste Voedselverspilling</h2>
-    <ul id="top5Restaurants">
-        <!-- Dynamically generated top 5 list -->
-    </ul>
-
-    <!-- Placeholder for Google Chart -->
-    <div id="myChart" style="width: 900px; height: 500px;"></div>
-
-    <!-- Load Google Charts script first -->
-    <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
-    <!-- Include Custom JavaScript file -->
-    <script src="Voedsel.script.js"></script>
+        <!-- Placeholder for Google Chart -->
+        <h2>Voedselverspilling per Restaurant</h2>
+        <div id="myChart" style="width: 900px; height: 500px;"></div>
+    </div>
 </body>
 </html>
