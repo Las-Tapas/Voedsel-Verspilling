@@ -16,6 +16,9 @@
 <body>
     <!-- Sidebar Navigation -->
     <div class="sidebar">
+        <button id="toggleSidebarButton" class="sidebar-toggle">
+            <span class="material-symbols-outlined">menu</span>
+        </button>
         <a class="dashboard">
             <span class="material-symbols-outlined">grid_view</span>
             <span>Dashboard</span>
@@ -52,11 +55,9 @@
             </tbody>
         </table>
         <button id="addFoodButton">Voeg Voedsel Toe</button>
-            <!-- Dynamically generated top 5 list -->
-        </ul>
 
         <!-- Placeholder for Google Chart -->
-        <div id="myChart" style="width: 900px; height: 500px;"></div>
+        <div id="myChart" style="width: 100%; max-width: 900px; height: 500px;"></div>
     </div>
 </body>
 </html>

@@ -1,4 +1,13 @@
 document.addEventListener('DOMContentLoaded', function () {
+    const sidebar = document.querySelector('.sidebar');
+    const toggleButton = document.getElementById('toggleSidebarButton');
+
+    if (toggleButton) {
+        toggleButton.addEventListener('click', () => {
+            sidebar.classList.toggle('closed');
+        });
+    }
+    
     const foodTable = document.getElementById('foodTable').getElementsByTagName('tbody')[0];
     const addFoodButton = document.getElementById('addFoodButton');
 
