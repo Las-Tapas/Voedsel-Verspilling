@@ -9,7 +9,7 @@ font-family: Arial, sans-serif;
 }
 
 .sidebar {
-    width: 250px;
+    width: 16.5%;
     background-color: #d52b1e; 
     color: white;
     position: fixed; 
@@ -142,7 +142,7 @@ th {
 }
 
 .top-restaurants {
-    width: 250px;
+    width: 15%;
     background-color: #d52b1e; 
     color: white;
     position:fixed;
