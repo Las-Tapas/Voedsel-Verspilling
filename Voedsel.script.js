@@ -23,7 +23,7 @@ document.addEventListener('DOMContentLoaded', function () {
             newRow.insertCell().innerText = item.quantity;
             newRow.insertCell().innerHTML = `<input type="number" min="0" max="${item.quantity}" value="${item.consumed || 0}" onchange="updateWasted(this)">`;
             newRow.insertCell().innerHTML = `<input type="number" min="0" max="${item.quantity}" value="${item.wasted || 0}" onchange="updateWasted(this)">`;
-            newRow.insertCell().innerHTML = `<button onclick="deleteRow(this)">Verwijderen</button>`;
+            newRow.insertCell().innerHTML = `<button class="deleteRowButton" onclick="deleteRow(this)">Verwijderen</button>`;
         });
     }
 
