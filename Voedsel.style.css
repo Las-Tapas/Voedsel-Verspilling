@@ -1,33 +1,31 @@
-/* General styling */
 body {
     font-family: Arial, sans-serif;
     margin: 0;
     padding: 0;
     display: flex;
-    background-color: #f5f5f5; /* Light gray background for a clean look */
-    color: #333; /* Darker text color for better readability */
-    overflow-x: hidden; /* Prevent horizontal scroll */
+    background-color: #f5f5f5; 
+    color: #333; 
+    overflow-x: hidden; 
 }
 
-/* Sidebar styling */
 .sidebar {
     width: 250px;
-    background-color: #d52b1e; /* Spanish red */
+    background-color: #d52b1e; 
     color: white;
-    position: fixed; /* Fixed position to ensure it stays in place */
-    height: 100vh; /* Full viewport height */
+    position: fixed; 
+    height: 100vh; 
     padding-top: 20px;
-    box-sizing: border-box; /* Ensure padding is included in the width */
-    box-shadow: 2px 0 8px rgba(0, 0, 0, 0.2); /* Slightly stronger shadow */
-    transition: transform 0.3s ease; /* Smooth transition for slide-in/slide-out */
+    box-sizing: border-box; 
+    box-shadow: 2px 0 8px rgba(0, 0, 0, 0.2); 
+    transition: transform 0.3s ease; 
 }
 
 .sidebar.closed {
-    transform: translateX(-250px); /* Hide sidebar off-screen */
+    transform: translateX(-250px);
 }
 
 .sidebar .sidebar-toggle {
-    display: none; /* Hidden by default */
+    display: none; 
     background: none;
     border: none;
     color: white;
@@ -43,22 +41,22 @@ body {
     align-items: center;
     margin: 15px 0;
     padding: 10px;
-    width: calc(100% - 20px); /* Adjust width to account for padding */
+    width: calc(100% - 20px); 
     text-align: center;
-    box-sizing: border-box; /* Ensure padding is included in the width */
-    border-radius: 8px; /* Rounded corners */
-    transition: background-color 0.3s, transform 0.3s; /* Smooth transition */
+    box-sizing: border-box; 
+    border-radius: 8px; 
+    transition: background-color 0.3s, transform 0.3s; 
 }
 
 .sidebar a:hover {
-    background-color: #f1c40f; /* Spanish yellow */
-    color: #d52b1e; /* Spanish red for text on hover */
-    transform: scale(1.05); /* Slight zoom effect on hover */
+    background-color: #f1c40f; 
+    color: #d52b1e; 
+    transform: scale(1.05); 
 }
 
 .sidebar a:focus {
-    outline: 2px solid #f1c40f; /* Outline for focus */
-    outline-offset: 2px; /* Space between outline and element */
+    outline: 2px solid #f1c40f; 
+    outline-offset: 2px; 
 }
 
 .sidebar .material-symbols-outlined {
@@ -70,108 +68,103 @@ body {
     font-size: 16px;
 }
 
-/* Main content styling */
 .main-content {
-    margin-left: 250px; /* Offset by the width of the sidebar */
+    margin-left: 250px; 
     padding: 20px;
-    background-color: #ffffff; /* White background for main content */
-    border-radius: 8px; /* Rounded corners for a modern look */
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Slightly stronger shadow */
-    transition: margin-left 0.3s ease; /* Smooth transition for margin adjustment */
+    background-color: #ffffff; 
+    border-radius: 8px; 
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); 
+    transition: margin-left 0.3s ease; 
 }
 
-/* Table styling */
 table {
     width: 100%;
     border-collapse: collapse;
     margin-bottom: 32px;
-    background-color: #ffffff; /* White background for table */
-    border-radius: 8px; /* Rounded corners for the table */
+    background-color: #ffffff; 
+    border-radius: 8px; 
 }
 
 th, td {
-    padding: 1.2rem; /* Slightly more padding */
+    padding: 1.2rem; 
     text-align: left;
-    border-bottom: 2px solid #ddd; /* Lighter border for readability */
+    border-bottom: 2px solid #ddd; 
 }
 
 th {
-    background-color: #f1c40f; /* Spanish yellow */
-    color: #d52b1e; /* Spanish red */
+    background-color: #f1c40f; 
+    color: #d52b1e; 
     font-weight: bold;
 }
 
-/* Button styling */
 #addFoodButton {
     margin-top: 10px;
-    padding: 10px 20px; /* Slightly larger padding */
+    padding: 10px 20px; 
     background-color: #d52b1e;
     color: white;
     border: none;
     cursor: pointer;
     border-radius: 5px;
-    transition: background-color 0.3s, transform 0.3s; /* Smooth transition */
+    transition: background-color 0.3s, transform 0.3s; 
 }
 
 #addFoodButton:hover {
     background-color: #f1c40f;
     color: #d52b1e;
-    transform: scale(1.05); /* Slight zoom effect on hover */
+    transform: scale(1.05); 
 }
 
 #addFoodButton:focus {
-    outline: 2px solid #f1c40f; /* Outline for focus */
-    outline-offset: 2px; /* Space between outline and button */
+    outline: 2px solid #f1c40f;
+    outline-offset: 2px; 
 }
 
-/* Responsive styling */
 @media (min-width: 1200px) {
-    /* Add styles for large screens here */
 }
 
 @media (max-width: 1024px) {
     .sidebar {
-        width: 200px; /* Slightly smaller sidebar on medium screens */
+        width: 200px;
     }
     
     .main-content {
-        margin-left: 200px; /* Adjust margin for sidebar width */
+        margin-left: 200px; 
     }
 }
 
 @media (max-width: 768px) {
     .sidebar {
-        width: 100%; /* Full width sidebar on small screens */
-        height: auto; /* Adjust height for smaller screens */
-        position: static; /* Make sidebar part of document flow */
-        transform: translateX(0); /* Ensure sidebar is visible */
+        width: 100%;
+        height: auto; 
+        position: static; 
+        transform: translateX(0); 
     }
     
     .main-content {
-        margin-left: 0; /* Remove margin for full-width sidebar */
-        padding: 10px; /* Reduce padding on smaller screens */
+        margin-left: 0; 
+        padding: 10px; 
     }
 
     .sidebar .sidebar-toggle {
-        display: block; /* Show toggle button on smaller screens */
+        display: block; 
     }
 }
 
 @media (max-width: 480px) {
     .sidebar {
-        display: none; /* Hide sidebar on very small screens */
+        display: none; 
     }
     
     .main-content {
-        margin-left: 0; /* Reset margin-left to 0 when sidebar is hidden */
-        padding: 10px; /* Consistent padding */
+        margin-left: 0; 
+        padding: 10px;
     }
 
     table {
-        font-size: 0.875rem; /* Smaller text for tables on very small screens */
+        font-size: 0.875rem; 
     }
 
     th, td {
-        padding: 0.8rem; /* Smaller padding for tables on very small screens */
+        padding: 0.8rem; 
     }
 }
