@@ -78,7 +78,7 @@ font-family: Arial, sans-serif;
 }
 
 table {
-    width: 100%;
+    width: 95%;
     border-collapse: collapse;
     margin-bottom: 32px;
     background-color: #ffffff; 
@@ -142,7 +142,7 @@ th {
 }
 
 .top-restaurants {
-    width: 15%;
+    width: 19%;
     background-color: #d52b1e; 
     color: white;
     position:fixed;
