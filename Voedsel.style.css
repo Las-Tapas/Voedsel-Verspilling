@@ -168,3 +168,18 @@ th {
     margin-bottom: 8px;
     font-size: 16px;
 }
+.header-container {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start; 
+}
+
+.header-container h1 {
+    margin-right: 20px; 
+}
+
+.header-container img {
+    max-height: 100px; 
+    height: auto;
+    width: auto;
+}
