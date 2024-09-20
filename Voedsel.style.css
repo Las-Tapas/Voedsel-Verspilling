@@ -3,7 +3,7 @@ font-family: Arial, sans-serif;
     margin: 0;
     padding: 0;
     display: flex;
-    background-color: #f5f5f5; 
+    background-color: rgb(253, 54, 40); 
     color: #333; 
     overflow-x: hidden; 
 }
@@ -71,8 +71,7 @@ font-family: Arial, sans-serif;
 .main-content {
     margin-left: 250px; 
     padding: 20px;
-    background-color: #ffffff; 
-    border-radius: 8px; 
+    background-color: #f4ff78; 
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); 
     transition: margin-left 0.3s ease; 
 }
@@ -143,7 +142,7 @@ th {
 
 .top-restaurants {
     width: 19%;
-    background-color: #d52b1e; 
+    background-color: rgb(253, 54, 40); 
     color: white;
     position:fixed;
     height: 100vh; 
