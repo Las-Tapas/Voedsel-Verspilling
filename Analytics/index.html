@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="nl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Las Tapas Analytics - Voedselverspilling Tracker</title>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Sharp">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="../Dashboard/style.css">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+<body>
+    <div class="container">
+        <aside>
+            <div class="top">
+                <div class="logo">
+                    <img src="../images/logo.png" alt="Las Tapas Logo">
+                    <h2>LAS<span class="danger">TAPAS</span></h2>
+                </div>
+                <button class="close" id="close-btn">
+                    <span class="material-symbols-sharp">close</span>
+                </button>
+            </div>
+            <nav class="sidebar">
+                <a href="../Dashboard/">
+                    <span class="material-symbols-sharp">grid_view</span>
+                    <h3>Dashboard</h3>
+                </a>
+                <a href="../Customers/">
+                    <span class="material-symbols-sharp">person_outline</span>
+                    <h3>Customers</h3>
+                </a>
+                <a href="../Orders/">
+                    <span class="material-symbols-sharp">receipt_long</span>
+                    <h3>Orders</h3>
+                </a>
+                <a href="../Analytics/" class="active">
+                    <span class="material-symbols-sharp">insights</span>
+                    <h3>Analytics</h3>
+                </a>
+                <a href="../Messages/">
+                    <span class="material-symbols-sharp">mail_outline</span>
+                    <h3>Messages</h3>
+                    <span class="message-count">26</span>
+                </a>
+                <a href="../Products/">
+                    <span class="material-symbols-sharp">inventory</span>
+                    <h3>Products</h3>
+                </a>
+                <a href="../Reservation/">
+                    <span class="material-symbols-sharp">book_online</span>
+                    <h3>Reservation</h3>
+                </a>
+                <a href="../Settings/">
+                    <span class="material-symbols-sharp">settings</span>
+                    <h3>Settings</h3>
+                </a>
+                <a href="../AddProduct/">
+                    <span class="material-symbols-sharp">add</span>
+                    <h3>Add Product</h3>
+                </a>
+                <a href="../Logout/">
+                    <span class="material-symbols-sharp">logout</span>
+                    <h3>Logout</h3>
+                </a>
+            </nav>
+        </aside>
+
+        <main>
+            <h1>Voedselverspilling Tracker - Las Tapas</h1>
+            
+            <section class="input-container">
+                <h2>Voeg Voedselproducten Toe</h2>
+                <form id="add-product-form">
+                    <input type="text" id="product-name" placeholder="Productnaam" required>
+                    <input type="number" id="product-amount" placeholder="Hoeveelheid" required>
+                    <select id="product-unit" required>
+                        <option value="kg">kg</option>
+                        <option value="g">g</option>
+                        <option value="l">l</option>
+                        <option value="ml">ml</option>
+                        <option value="stuks">stuks</option>
+                    </select>
+                    <input type="date" id="purchase-date" required>
+                    <input type="date" id="expiry-date" required>
+                    <button type="submit">Voeg Product Toe</button>
+                </form>
+            </section>
+    
+            <section class="product-table">
+                <h2>Producten in voorraad</h2>
+                <table id="product-table">
+                    <thead>
+                        <tr>
+                            <th>Naam</th>
+                            <th>Hoeveelheid</th>
+                            <th>Aankoopdatum</th>
+                            <th>Houdbaarheidsdatum</th>
+                            <th>Actie</th>
+                        </tr>
+                    </thead>
+                    <tbody></tbody>
+                </table>
+            </section>
+
+            <section class="chart-container">
+                <canvas id="waste-chart"></canvas>
+            </section>
+        </main>
+
+        <aside class="right">
+            <div class="top">
+                <button id="menu-btn">
+                    <span class="material-symbols-sharp">menu</span>
+                </button>
+                <div class="theme-toggler">
+                    <button class="active" aria-label="Lichte modus">
+                        <span class="material-symbols-sharp">light_mode</span>
+                    </button>
+                    <button aria-label="Donkere modus">
+                        <span class="material-symbols-sharp">dark_mode</span>
+                    </button>
+                </div>
+                <div class="profile">
+                    <div class="info">
+                        <p>Hey, <b>Burak</b></p>
+                        <small class="text-muted">Admin</small> 
+                    </div>
+                    <div class="profile-photo">
+                        <img src="../images/Profile-1.jpg" alt="Profielfoto van Burak">
+                    </div>
+                </div>
+            </div>
+        
+            <section class="leaderboard-container">
+                <h2>Leaderboard - Minste Voedselverspilling (Deze Maand)</h2>
+                <ol id="leaderboard-list" class="leaderboard-list"></ol>
+            </section>
+
+            <section class="pie-chart-container">
+                <canvas id="pie-chart"></canvas>
+            </section>
+        </aside>
+    </div>
+
+    <script src="script.js"></script>
+    <script src="../Dashboard/index.js"></script>
+</body>
+</html>
